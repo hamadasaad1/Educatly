@@ -91,7 +91,6 @@ class _ChatWidgetState extends State<ChatWidget> {
                   child: buildChatList(),
                 ),
               ),
-              TypingWidget(receiverId: widget.receiverModel?.id ?? ''),
               buildSendBottom()
             ],
           );
@@ -257,6 +256,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                               );
 
                               _messageController.clear();
+                              updateTyping(false);
                             }
                           },
                           child: CustomSvgImage(

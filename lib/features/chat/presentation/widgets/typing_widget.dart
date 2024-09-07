@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:template/app/singlton.dart';
-
 import 'package:template/features/chat/presentation/cubit/chat_cubit.dart';
-import 'package:template/shared/resources/size_config.dart';
 import 'package:template/shared/resources/styles_manager.dart';
 
-import '../../../../shared/resources/manager_values.dart';
+import '../../../../shared/resources/font_manager.dart';
 
 class TypingWidget extends StatelessWidget {
   final String receiverId;
@@ -29,11 +27,11 @@ class TypingWidget extends StatelessWidget {
               String? typingUserId = snapshot.data;
               if (typingUserId != null &&
                   typingUserId != Singleton().userModel?.uid) {
-                return Padding(
-                  padding: getPadding(vertical: AppPadding.p8),
-                  child: Text(
-                    'Typing...',
-                    style: getBoldStyle(),
+                return Text(
+                  'Typing...',
+                  style: getRegularStyle(
+                    fontSize:  FontSize.s12,
+                    color: Colors.white.withOpacity( .5),
                   ),
                 );
               }

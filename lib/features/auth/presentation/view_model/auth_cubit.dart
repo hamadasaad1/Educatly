@@ -4,7 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:template/app/app_secure_storage.dart';
 import 'package:template/app/singlton.dart';
 
 import '../../../../app/error/failure.dart';
@@ -86,6 +86,8 @@ class AuthCubit extends Cubit<AuthState> {
       };
     }, (data) {
       Singleton().userData = data;
+      locator<AppSecureStorage>()
+          .setDataToSecureStorage(key: 'UserId', value: data.id);
       emit(AuthGetUserSuccessState(entity: data));
     });
   }

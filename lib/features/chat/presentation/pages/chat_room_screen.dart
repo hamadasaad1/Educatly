@@ -5,10 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:template/shared/common/widget/custom_image_widget.dart';
 import 'package:template/shared/resources/assets_manager.dart';
 import 'package:template/shared/resources/color_manager.dart';
-import 'package:template/shared/resources/font_manager.dart';
-import 'package:template/shared/resources/styles_manager.dart';
 
-import '../../../../shared/common/widget/custom_app_bar.dart';
 import '../../../../shared/resources/manager_values.dart';
 import '../../../../shared/resources/size_config.dart';
 import '../cubit/chat_cubit.dart';

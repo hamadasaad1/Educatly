@@ -48,7 +48,7 @@ class ChatCubit extends Cubit<ChatState> {
     }, (data) {
       emit(ChatSuccessState());
       sendNotification(
-          title: 'New Message ${Singleton().userData?.get('fullName') ?? ''}',
+          title: 'New Message from ${Singleton().userData?.get('fullName') ?? ''}',
           body: model.message,
           receiverId: model.receiverId,
           userId: model.senderId);

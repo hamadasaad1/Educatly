@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:template/features/chat/presentation/cubit/chat_cubit.dart';
+import 'package:template/features/chat/presentation/widgets/typing_widget.dart';
 import 'package:template/shared/resources/styles_manager.dart';
 
 import '../../../../shared/resources/color_manager.dart';
@@ -42,6 +43,7 @@ class UserStatusWidget extends StatelessWidget {
                       fontSize: FontSize.s12,
                       color: ColorManager.white.withOpacity(.5)),
                 ),
+                TypingWidget(receiverId: receiverId),
               ],
             );
           },

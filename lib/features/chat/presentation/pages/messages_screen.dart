@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:template/app/extensions.dart';
 import 'package:template/features/chat/presentation/model/receiver_model.dart';
 import 'package:template/features/chat/presentation/pages/chat_room_screen.dart';
 
@@ -20,8 +19,9 @@ import '../../../../shared/resources/font_manager.dart';
 import '../../../../shared/resources/manager_values.dart';
 import '../../../../shared/resources/size_config.dart';
 import '../../../../shared/resources/styles_manager.dart';
-import '../widgets/drawer_widget.dart';
 import '../cubit/chat_cubit.dart';
+import '../widgets/drawer_widget.dart';
+import '../widgets/user_data.dart';
 import 'users_screen.dart';
 
 class MessagesScreen extends StatefulWidget {
@@ -130,6 +130,7 @@ class _MessagesScreenState extends State<MessagesScreen>
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  if (Singleton().userData == null) const UpdateUserData(),
                   Expanded(
                     child: buildChatList(),
                   ),

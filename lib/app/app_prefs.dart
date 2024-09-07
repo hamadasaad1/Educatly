@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppPreferences {
@@ -10,7 +11,7 @@ class AppPreferences {
     required String key,
     required dynamic value,
   }) async {
-    print('Item Saved in shared pref ');
+    debugPrint('Item Saved in shared pref ');
     if (value is String) {
       return await _sharedPreferences.setString(key, value);
     } //when data string

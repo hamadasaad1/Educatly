@@ -3,9 +3,11 @@ import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:template/app/app_secure_storage.dart';
 
 import '../features/auth/data/remote_source/auth_remote_data_source.dart';
 import '../features/auth/data/repository/repository_impl.dart';
@@ -37,13 +39,20 @@ Future<void> initAppModule() async {
   //shared preference instance
   final sharedPref = await SharedPreferences.getInstance();
 
+  
+
   locator.registerLazySingleton<SharedPreferences>(
       () => sharedPref); //this create when call
+
 
   //instance app preferences
 
   locator
       .registerLazySingleton<AppPreferences>(() => AppPreferences(locator()));
+
+
+      const secureStorage = FlutterSecureStorage();
+  locator.registerLazySingleton<AppSecureStorage>(() => AppSecureStorage(secureStorage));
 
   // network info
   locator.registerLazySingleton<NetworkInfo>(
@@ -70,8 +79,8 @@ Future<void> initAppModule() async {
 
   locator
       .registerLazySingleton<FirebaseStorage>(() => FirebaseStorage.instance);
-  locator
-      .registerLazySingleton<FirebaseMessaging>(() => FirebaseMessaging.instance);
+  locator.registerLazySingleton<FirebaseMessaging>(
+      () => FirebaseMessaging.instance);
 
   locator.registerSingleton<MediaServiceInterface>(MediaService());
 }
@@ -107,7 +116,6 @@ initAuthModule() {
         .registerFactory<StoreUserUseCase>(() => StoreUserUseCase(locator()));
   }
 
-
   if (!GetIt.I.isRegistered<AuthGetUserUseCase>()) {
     locator.registerFactory<AuthGetUserUseCase>(
         () => AuthGetUserUseCase(locator()));
@@ -116,8 +124,6 @@ initAuthModule() {
     locator.registerFactory<UpdateUserStatusUseCase>(
         () => UpdateUserStatusUseCase(locator()));
   }
-
-
 }
 
 ///this KDS dependency injection
@@ -135,8 +141,6 @@ initHomeModule() {
         () => HomeGetAllMealsUseCase(locator()));
   }
 }
-
-
 
 initialChatModule() {
   if (!GetIt.I.isRegistered<ChatRemoteDataSource>()) {
@@ -174,8 +178,6 @@ initialChatModule() {
         () => ChatGetAllUsersUseCase(locator()));
   }
 
-
-
   if (!GetIt.I.isRegistered<ChatGetLastMessagesUseCase>()) {
     locator.registerFactory<ChatGetLastMessagesUseCase>(
         () => ChatGetLastMessagesUseCase(locator()));
@@ -185,8 +187,4 @@ initialChatModule() {
     locator.registerFactory<ChatUpdateTypingUseCase>(
         () => ChatUpdateTypingUseCase(locator()));
   }
-
-
-
 }
-
