@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "523957762628",
+    "firebase_url": "https://notification-14cad.firebaseio.com",
+    "project_id": "notification-14cad",
+    "storage_bucket": "notification-14cad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523957762628:android:699caa0985ad862ae01a11",
+        "android_client_info": {
+          "package_name": "com.hamada.notify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523957762628-t0q9k6d7lcqnqp6l25c3mema3hl2j5l6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2n3UuOGqflKj1arpnECwhD145Tl51-QA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523957762628-t0q9k6d7lcqnqp6l25c3mema3hl2j5l6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523957762628:android:ebd3316902c68ed0e01a11",
+        "android_client_info": {
+          "package_name": "com.template.template"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523957762628-t0q9k6d7lcqnqp6l25c3mema3hl2j5l6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2n3UuOGqflKj1arpnECwhD145Tl51-QA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523957762628-t0q9k6d7lcqnqp6l25c3mema3hl2j5l6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,146 @@
+name: template
+description: A new Flutter project.
+
+publish_to: 'none'
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+
+dependencies:
+
+  analyzer: ^5.13.0
+  country_picker: ^2.0.16
+  dartz: ^0.10.1
+  dio: ^5.0.6
+  flutter_bloc: ^8.1.2
+  bloc: ^8.1.0
+  flutter_svg: ^2.0.7
+  freezed: ^2.0.5
+  freezed_annotation: ^2.1.0
+  get_it: ^7.2.0
+  internet_connection_checker: any
+  json_serializable: ^6.3.1
+  lottie: ^1.4.3
+  pretty_dio_logger: ^1.1.1
+  retrofit: ^4.1.0
+  shared_preferences: ^2.0.15
+  cached_network_image: ^3.2.3
+  flutter_screenutil: ^5.7.0
+  flutter_phoenix: ^1.1.1
+  restart_app: ^1.2.1
+  intl: ^0.18.1
+  modal_bottom_sheet: 3.0.0-pre
+  flutter_switch: ^0.3.2
+  dotted_border: ^2.0.0+3
+  ping_discover_network_forked: ^0.0.1
+  network_info_plus: ^4.0.1
+  permission_handler: ^11.0.1
+
+  uuid: ^3.0.7
+  crypto: ^3.0.3
+  flutter_datetime_picker_plus: ^2.0.1
+  flutter_staggered_grid_view: ^0.6.2
+  flutter_smart_dialog: ^4.9.3+1
+  geocoder2: ^1.4.0
+  build_runner: ^2.4.6
+  shimmer: ^3.0.0
+  flutter_multi_formatter: ^2.11.14
+  flutter_svg_provider: ^1.0.4
+  pin_code_fields: ^7.4.0
+  infinite_scroll_pagination: ^3.2.0
+  lazy_load_scrollview: ^1.3.0
+  flutter_launcher_icons: ^0.11.0
+  path_provider: ^2.1.0
+  touchable: ^1.0.2
+  equatable: ^2.0.5
+  package_info_plus: ^4.1.0
+  function_tree: ^0.9.0
+  url_launcher: ^6.1.14
+  web_socket_channel: ^2.4.0
+  jwt_decode: ^0.3.1
+  firebase_crashlytics: ^3.4.9
+  timezone: ^0.9.2
+  flutter_secure_storage: ^9.0.0
+  audioplayers: ^5.2.1
+  hive_storage: ^0.0.3
+  hive_flutter: ^1.1.0
+  hive_generator: ^2.0.1
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  cloud_firestore: ^4.14.0
+  firebase_storage: ^11.6.0
+  connectivity_plus: ^5.0.2
+  flutter_chat_bubble: ^2.0.2
+  image_picker: ^1.0.8
+  firebase_messaging: ^14.7.10
+  flutter_local_notifications: ^17.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  retrofit_generator: ^8.0.1
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/svg/
+    - assets/json/
+    - assets/fonts/
+    - assets/sounds/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Montserrat-Light.ttf
+          weight: 300
+
+
+    - family: Monaco
+      fonts:
+        - asset: assets/fonts/Monaco Regular.ttf
+          weight: 400
+
+
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Black.ttf
+          weight: 800
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/shared/resources/
+  filename: assets_manager.dart
+

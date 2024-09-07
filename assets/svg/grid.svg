@@ -1,0 +1,10 @@
+<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="objects-column 1" clip-path="url(#clip0_560_13730)">
+<path id="Vector" d="M0.75 3V9H11.75V0H3.75C2.096 0 0.75 1.346 0.75 3ZM9.75 7H2.75V3C2.75 2.448 3.198 2 3.75 2H9.75V7ZM13.75 24H21.75C23.404 24 24.75 22.654 24.75 21V15H13.75V24ZM15.75 17H22.75V21C22.75 21.552 22.302 22 21.75 22H15.75V17ZM21.75 0H13.75V13H24.75V3C24.75 1.346 23.404 0 21.75 0ZM22.75 11H15.75V2H21.75C22.302 2 22.75 2.448 22.75 3V11ZM0.75 21C0.75 22.654 2.096 24 3.75 24H11.75V11H0.75V21ZM2.75 13H9.75V22H3.75C3.198 22 2.75 21.552 2.75 21V13Z" fill="#3A3A38"/>
+</g>
+<defs>
+<clipPath id="clip0_560_13730">
+<rect width="24" height="24" fill="white" transform="translate(0.75)"/>
+</clipPath>
+</defs>
+</svg>
